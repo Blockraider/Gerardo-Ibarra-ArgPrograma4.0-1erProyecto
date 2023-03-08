@@ -1,0 +1,732 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}   /* Formato Pagina */
+
+:root /* Central de colores */{
+  --theme-color:rgb(209, 200, 200);
+  --primary-color:aqua;
+  --secondary-color:#0a1a2a;
+  --Tertiary-Color:aquamarine;
+  --text-color-inverse: rgb(241, 232, 232);
+  --text-color: rgb(0, 0, 0);
+  --navbar-shallow-color: #0a1a2a;
+  --menu-mobile-background-color: #3a3a3a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin: 78px;
+  }
+  
+
+body {
+  background-color: var(--theme-color);
+  font-family: 'calibri';
+  color: var(--text-color);
+}
+
+/* Menu Responsive*/
+
+Nav{
+  background-color: var(--secondary-color);
+  height: 80px;
+  width: 100%;
+  position: fixed;
+
+}
+
+nav ul {
+float: right;
+margin-right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0px 5px;
+}
+
+nav ul li a {
+  color:var(--text-color-inverse);
+  font-size: 20px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  position: relative;
+  
+}
+
+ul a::after {
+  content: "";
+  position: absolute;
+  background-color: var(--Tertiary-Color);
+  left: 0;
+  top: 100%;
+  width: 100%;
+  height: 2px;
+  cursor: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.selected::after {
+  opacity: 1;
+}
+
+ul a:hover {
+  color: var(--primary-color);
+}
+
+/*Logo*/
+
+.logo{
+  position: absolute;
+  align-items: center;
+  cursor: none;
+  padding-left: 50px;
+  padding-top: 15px;
+   }
+
+.Block {
+  width: 50px;
+  height: 50px;
+  }
+
+/*boton mobil*/
+
+#check {
+  display: none;
+}
+
+/* Contenido */
+
+.Ceo {
+  text-align: center;
+  margin-left: 50px;
+}
+
+.Ceo-info{
+  padding: 80px;
+ 
+}
+
+.Ceo-title{
+font-size: 60px;
+font-weight: bold;
+margin: 30px auto;
+color: var(--primary-color);
+
+}
+
+.Ceo-img-section {
+ align-items: center;
+}
+
+.Ceo-img {
+  width: 80%;
+  max-width: 500px;
+  
+}
+
+.Ceo-P{
+  font-size: 35px;
+  font-weight: 500;
+  line-height: 1.3;
+  max-width: 450px;
+  margin: 30px auto;
+}
+
+.Ceo-line {
+  background-color: var(--navbar-shallow-color);
+  height: 10px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+
+}
+
+ /* :::Habilidades ::: */
+
+ .titulo {
+  font-size: 70px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 30px;
+  }
+
+ .Habil-habil {
+  font-size: 30px;
+  font-weight: 600;
+  box-shadow: 0px 7px 20px var(--secondary-color);
+  border-radius: 42px;
+  padding: 0.5em 0.5em;
+  margin: 20px;
+  }
+
+  .habil-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+   }
+
+/* Footer */
+
+.Pie-Page {
+  background-color: black;
+  max-width: 100%;
+  height: auto;
+  clear: both;
+}
+
+.Pie-Page .Mod01 {
+  width: 100%;
+  max-width: 1200;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  padding: 45px 40px 40px;
+}
+
+.Pie-Page .Mod01 .box figure {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Pie-Page .Mod01 .box figure img {
+  width: 150px;
+}
+
+.Pie-Page .Mod01 .box h2 {
+  color: #fff;
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+
+.Pie-Page .Mod01 .box p {
+color: #efefef;
+margin-bottom: 10px;
+}
+
+.Pie-Page .Mod01 .RedSocial a {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color:#fff;
+  margin-right: 10px;
+  background-color: var(--secondary-color);
+  text-align: center;
+  transition: all 300ms ease;
+  }
+
+  .Pie-Page .Mod01 .RedSocial a:hover {
+    color: var(--Tertiary-Color);
+  }
+
+  .Pie-Page .Mod02 {
+    background-color: var(--secondary-color);
+    padding: 15px 10px;
+    text-align: center;
+    color: rgb(184, 51, 51);
+    
+  }
+
+  .Pie-Page .Mod02 small {
+    font-size: 15px;
+    color: #fff;
+  }
+
+/* :::FIN::: */
+
+  @media  (max-width:950px) /* Formato Mobil */ 
+  
+  
+     /* :::Boton MO::: */
+    {
+      .checkbtn {
+      display: block;
+      margin-right: 50px;
+      float: right;
+      color: var(--text-color-inverse);
+      font-size: 30px;
+      line-height: 80px;
+      cursor: pointer;
+    }
+
+
+     /* :::Menu Mo::: */
+
+     .MenuC {
+      flex-direction: column;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background:#0a1a2adc;
+      top: 80px;
+      left: 100%;
+      text-align: center;
+      overflow-y: auto;
+      transition: all 1s;    
+    }
+
+    
+
+    #check:checked ~ ul {
+      left: 0%;
+    }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+      nav ul li {
+      display: block;
+      margin: 35px ;
+      line-height: 50px;
+    }
+    
+       nav ul li a {
+       font-size: 35px;
+    }
+
+      ul a:hover::after{
+      opacity: 1;
+    }
+
+    /* :::Ceo Mo::: */
+    .Ceo-title{
+      font-size: 40px;
+      font-weight: bold;
+      text-align:center;
+      color: var(--secondary-color);
+      
+     }
+
+    .Ceo-P{
+      font-size: 25px;
+      font-weight: 500;
+      line-height: 1;
+      height: 50%;
+      margin-left: -30px;
+      
+    }
+
+      .Ceo-line {
+        background-color: var(--navbar-shallow-color);
+        height: 10px;
+        width: 93%;
+        left: 0;
+        bottom: 0;
+    }
+      
+       /* ::Experiencia:: */
+
+       .experiencias {
+           display: flex;
+           flex-direction: column;
+       }
+
+       .expe-body {
+        background-color:var(--secondary-color);
+        color:var(--text-color-inverse)
+       }
+       
+       .expe-titulo {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 30px;
+        margin: 40px;
+        margin-top: 20px;
+      }
+      
+      .expe-date {
+        font-size: 40px;
+        font-weight: 900;
+        color: var(--Tertiary-Color);
+      }
+      
+      .expe-company {
+        font-size: 25px;
+        text-transform: uppercase;
+        margin-top: 5px;
+      }
+      
+      .expe-cargo {
+        font-weight: 500;
+        font-size: 23px;
+        margin-top: 20px;
+        color: var(--Tertiary-Color);
+      }
+      
+      .expe-descript {
+        font-weight: 400;
+        font-size: 19px;
+        margin-top: 10px;
+        color: rgb(228, 233, 233);
+      }
+      
+      .expe {
+        padding: 25px;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+       /* :::Habilidades MO::: */
+
+
+       .posicion-H{
+        padding-left: 25px;
+        padding-right: 25px;
+        }
+        
+        .posicion-V{
+        padding-top: 25px;
+        padding-bottom: 25px;
+        }
+
+       .titulo {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 30px;
+        margin-top: 25px;
+        
+        }
+      
+       .Habil-habil {
+        font-size: 20px;
+        font-weight: 500;
+        box-shadow: 0 4px 20px var(--secondary-color);
+        border-radius: 42px;
+        padding: 0.5em 0.7em;
+        margin: 15px;
+        margin-bottom: 40PX;
+      }
+      
+        .habil-list {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+      }
+
+       /* :::Contacto::: */
+
+        .contact {
+         background-color:var(--secondary-color);
+         color: var(--text-color-inverse);
+         font-size: 18px;
+         border-radius: 14px;
+         padding: 25px;
+
+         display: grid;
+         gap: 25px;
+         margin-bottom: 50px;
+      }
+
+      .contact p,
+      .contact h2,
+      .contact ul {
+        margin: 0;
+        padding: 0;
+      }
+
+      .cont-data,
+      .contact-form {
+        display: grid;
+        gap: 20px;
+        
+      }
+
+      .contact-form {
+       color: var(--Tertiary-Color); 
+      }
+      .cont-title{
+        font-size: 30px;
+        font-weight: 500;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .cont-data-grupo,
+      .contacto-form-grupo {
+        display: grid;
+        gap: 10px;
+      }  
+
+      .cont-label {
+        display: grid;
+        gap: 3px;
+        color: var(--Tertiary-Color);
+
+      }
+
+      .contact-form input {
+        border-radius: 7px;
+        border:none;
+        height: 30px;
+        padding: 5px 10px;
+        
+      }
+
+      .contact-form textarea {
+        border-radius: 7px;
+        border:none;
+        height: auto;
+        resize: vertical;      
+      }
+
+      .conct-form-submit {
+        width: 100%;
+        height: 50px;
+        background-color: var(--text-color);
+        border-radius: 7px;
+        color: var(--text-color-inverse);
+        border: 1px solid var(--theme-color);
+        cursor: pointer;
+      }
+
+      .conct-form-submit:hover {
+        box-shadow: 0 0 14px var(--Tertiary-Color);
+      }
+       /* :::Footer MO::: */
+
+       
+      .Pie-Page .Mod01 {
+        width: 80%;
+        grid-template-columns: repeat(1, 1fr);
+       }
+  
+      .Pie-Page .Mod01 .box figure img {
+        width: 130px;
+       }
+  
+  }   
+
+  /* :::FIN Mobil::: */
+
+  @media  (min-width:950px) /* Formato Desktop */ 
+  
+  {
+
+     /* ::Menu:: */
+
+     ul a:hover::after{
+      opacity: 1;
+      }
+
+    /* Contenido */
+  
+
+    .Ceo {
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      width: 90%;
+      margin: 0 auto;
+      align-items: center;
+    }
+    
+    .Ceo-info{
+      padding: 80px;
+     
+    }
+    
+    .Ceo-title{
+    font-size: 80px;
+    font-weight: bold;
+    margin: 60px auto;
+    color: var(--text-color);
+    font-family: 'Times New Roman', Times, serif;
+  
+    }
+    
+    .Ceo-img-section {
+     margin: 100px;
+     align-items: center;
+    }
+    
+    .Ceo-img {
+      width: 800px;
+      max-width: 800px;
+      margin: 0px auto;
+      z-index: 100;
+      
+    }
+    
+    .Ceo-P{
+      font-size: 40px;
+      font-weight: 350;
+    }
+
+     /* ::Experiencia:: */
+
+     .experiencias {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .expe-body {
+   background-color:var(--secondary-color);
+   color:var(--text-color-inverse);
+   
+  }
+  
+  .expe-titulo {
+   text-align: center;
+   text-transform: uppercase;
+   font-weight: bold;
+   font-size: 60px;
+   margin: 25px;
+   margin-top: 80px;
+ }
+ 
+ .expe-date {
+   font-size: 60px;
+   font-weight: 900;
+   color: rgb(13, 238, 227);
+ }
+ 
+ .expe-company {
+   font-size: 40px;
+   text-transform: uppercase;
+   margin-top: 5px;
+ }
+ 
+ .expe-cargo {
+   font-weight: 700;
+   font-size: 35px;
+   margin-top: 20px;
+   color: rgb(13, 238, 227);
+ }
+ 
+ .expe-descript {
+   font-weight: 400;
+   font-size: 40px;
+   margin-top: 40px;
+ }
+ 
+ .expe {
+   padding: 35px;
+   max-width: 950px;
+   margin: 0 auto;
+ }
+
+ /* ::Habilidades*/
+
+  .posicion-H{
+  padding-left: 70px;
+  padding-right: 70px;
+  }
+  
+  .posicion-V{
+  padding-top: 70px;
+  padding-bottom:  70px;
+  }
+
+  /* :::Contacto::: */
+
+  .contact {
+    background-color:var(--secondary-color);
+    color: var(--text-color-inverse);
+    font-size: 30px;
+    border-radius: 14px;
+    padding: 70px;
+
+    display: grid;
+    gap: 25px;
+    max-width: 50%;
+    margin: 0 auto;
+    
+    margin-bottom: 50px;
+ }
+
+ .cont-data,
+ .contact-form {
+   display: grid;
+   gap: 50px;
+   
+ }
+
+ .contact-form {
+  color: var(--Tertiary-Color); 
+ }
+ .cont-title{
+   font-size: 65px;
+   font-weight: 500;
+   text-transform: uppercase;
+  }
+   
+ .cont-data-grupo,
+ .contacto-form-grupo {
+   display: grid;
+   gap: 5px;
+ }  
+
+ .cont-label {
+   display: grid;
+   gap: 3px;
+   color: var(--Tertiary-Color);
+
+ }
+
+ .contact-form input {
+   border-radius: 7px;
+   border:none;
+   height: 30px;
+   padding: 5px 10px;
+   
+ }
+
+ .contact-form textarea {
+   border-radius: 7px;
+   border:none;
+   height: auto;
+   resize: vertical;      
+ }
+
+ .conct-form-submit {
+   width: 100%;
+   height: 50px;
+   background-color: var(--text-color);
+   border-radius: 7px;
+   color: var(--text-color-inverse);
+   border: 1px solid var(--theme-color);
+   cursor: pointer;
+ }
+
+ .conct-form-submit:hover {
+   box-shadow: 0 0 14px var(--Tertiary-Color);
+ }
+
+ .cont-title {
+  grid-area: title;
+ }
+
+ .cont-data {
+  grid-area: data;
+ }
+
+ .contact-form {
+  grid-area: form;
+ }
+
+ .contact{
+  display: grid;
+  grid:
+  "title form" auto
+  "data form" 1fr/
+  1fr 1fr
+
+ }
+
+    /* :::FIN::: */
+
+  }
